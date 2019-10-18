@@ -1,0 +1,140 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+a{
+    text-decoration:none;
+}
+li{
+    list-style: none;
+}
+/* style header */
+#header{
+    width: 100%;
+    height: 50px;
+    background: olivedrab;
+}
+#menu{
+    margin: 0px auto;
+    width: 1000px;
+}
+#menu>ul>li{
+    display: block;
+    margin-left: 20px;
+    position: relative;
+    height: 50px;
+    float: left;
+}
+.checkbox+input{
+    display: none;
+}
+#menu>ul>li> a{
+    color: white;
+    font-size: 18px;
+}
+.checkbox+input+ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+.checkbox{
+    line-height: 50px;
+    color: white;
+    font-size: 18px;
+}
+.checkbox+input+ul li{
+    background: rgb(162, 207, 71);
+    width: 200px;
+    height: 30px;
+    padding: 10px;;
+}
+.checkbox+ul li a{
+    color: black; 
+}
+.checkbox+input:checked+ul{
+    display: block;
+    z-index: 100;
+}
+
+/* style body */
+#body{
+    width: 1000px;
+    height: 500px;
+    margin: 0px auto;
+    background: #ebebeb;
+    padding-top:40px;
+}
+/* style Switch */
+#switch{
+    margin-left: 100px;
+}
+#switch label span{
+    background: cadetblue;
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid #19a000;
+    position: relative;
+    
+}
+#switch label.checkbox input{
+    display: none;
+}
+#switch span::after{
+    content: '';
+    background: white;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    position: absolute;
+    top:1px;
+}
+#switch label.checkbox input:checked+span{
+    background: rgb(234, 69, 215)
+
+}
+#switch label.checkbox input:checked+span::after{
+    right: 0px;
+}
+
+
+/* style Tabmenu */
+
+#tabMenu{
+    background: rgb(215, 237, 223);
+    width: 600px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+}
+#tabMenu>input{
+    display: none;    
+    background: rgb(244, 248, 239);
+}
+#tabMenu input+label>span{
+    background: rgb(244, 248, 239);
+    display: block;
+    width: 100px;
+    height: 25px;
+    text-align: center;
+    float: left;
+}
+#tabMenu>div{
+    padding-top:10px;
+    display: none;
+    position: absolute;
+    top: 25px;
+    background: #91c439;
+    width: 100%;
+    height: 175px;
+}
+#tabMenu>input:checked+label+div{
+    display: block;
+}
+#tabMenu input:checked+label>span{
+    background: #91c439;
+}
